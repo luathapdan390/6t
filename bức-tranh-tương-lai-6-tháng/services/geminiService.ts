@@ -1,11 +1,11 @@
 
 import { GoogleGenAI, Modality } from "@google/genai";
 
-if (!process.env.API_KEY) {
-    throw new Error("API_KEY environment variable not set");
+if (!process.env.GEMINI_API_KEY) {
+    throw new Error("GEMINI_API_KEY environment variable not set");
 }
 
-const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
+const ai = new GoogleGenAI({ apiKey: process.env.GEMINI_API_KEY });
 
 const generateVisionText = async (
     futureDate: Date, 
